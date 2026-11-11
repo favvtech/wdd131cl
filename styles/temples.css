@@ -1,0 +1,184 @@
+/* temples.css - Mobile First Styles */
+
+:root {
+    --primary-color: #1b3b5f;
+    --secondary-color: #2a6f97;
+    --accent-color: #ffd166;
+    --nav-hover-bg: #254b77;
+    --nav-hover-text: #ffd166;
+    --nav-active-bg: #2a6f97;
+    --text-color: #2d3748;
+    --heading-color: #111827;
+    --card-bg: #ffffff;
+    --page-bg: #f8fafc;
+    --border-color: #e2e8f0;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--page-bg);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/* Hamburger Menu Button */
+#menu {
+    display: block;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    font-family: inherit;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#menu:hover {
+    color: var(--accent-color);
+}
+
+/* Navigation Menu - Mobile First (Flexbox) */
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav a {
+    display: none;
+    padding: 0.85rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+nav.open a {
+    display: block;
+}
+
+nav a:hover {
+    background-color: var(--nav-hover-bg);
+    color: var(--nav-hover-text);
+}
+
+nav a.active {
+    background-color: var(--nav-active-bg);
+    color: #ffffff;
+}
+
+/* Main Content Area */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+main h1 {
+    font-family: var(--font-heading);
+    color: var(--heading-color);
+    font-size: 2rem;
+    text-align: center;
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+}
+
+/* Figure & Figcaption Elements */
+figure {
+    margin: 0;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.06);
+}
+
+figure img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+figcaption {
+    padding: 1rem 0.75rem;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+#lastModified {
+    color: #cbd5e1;
+    font-size: 0.85rem;
+}
+

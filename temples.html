@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - WDD 131 - Favour Amoni</title>
+    <meta name="description" content="Temple Album project showcasing temple photographs with a responsive mobile-first design and interactive navigation for WDD 131.">
+    <meta name="author" content="Favour Amoni">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- External Stylesheets (Mobile-First Order) -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- Deferred JavaScript -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span class="site-title">Temple Album</span>
+        <button type="button" id="menu" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+        <nav class="navigation">
+            <a href="#" class="active">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <figure>
+            <img src="images/abanigeriatemple.jpeg" alt="Aba Nigeria Temple" loading="lazy">
+            <figcaption>Aba Nigeria Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/abidjanivorycoasttemple.jpeg" alt="Abidjan Ivory Coast Temple" loading="lazy">
+            <figcaption>Abidjan Ivory Coast Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/accraghanatemple.jpeg" alt="Accra Ghana Temple" loading="lazy">
+            <figcaption>Accra Ghana Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/atlanta-georgia-temple.webp" alt="Atlanta Georgia Temple" loading="lazy">
+            <figcaption>Atlanta Georgia Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/oaklandcaliforniatemple.jpeg" alt="Oakland California Temple" loading="lazy">
+            <figcaption>Oakland California Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/paris-france-temple-20561.webp" alt="Paris France Temple" loading="lazy">
+            <figcaption>Paris France Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/sydneyaustraliatemple.jpeg" alt="Sydney Australia Temple" loading="lazy">
+            <figcaption>Sydney Australia Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/tokyojapantemple.jpeg" alt="Tokyo Japan Temple" loading="lazy">
+            <figcaption>Tokyo Japan Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/wellington-new-zealand-temple.webp" alt="Wellington New Zealand Temple" loading="lazy">
+            <figcaption>Wellington New Zealand Temple</figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Favour Amoni | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
+
