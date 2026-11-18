@@ -19,6 +19,15 @@ body {
   font-family: var(--body-font);
   background-color: #f3f3f3;
   color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /*Header */
@@ -52,28 +61,30 @@ footer {
 }
 
 /*Hero Section */
-.hero picture img {
-  display: block;
-  width: 100%;
-  height: auto;
-  display: block;
-  max-height: 500px;
-  object-fit: cover;
-  margin-bottom: 0;
-}
-.hero{
+.hero {
   position: relative;
   width: 100%;
-  min-height: auto;
+  flex: 1;
+  display: flex;
+  min-height: 500px;
+  overflow: hidden;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-.hero {
-  position: relative;
+.hero picture {
   width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+.hero picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
   min-height: 500px;
-  overflow: hidden;
+  object-fit: cover;
+  margin-bottom: 0;
 }
 
 /*Weather Panels */
@@ -142,6 +153,12 @@ footer {
 
   .hero {
     min-height: auto;
+    display: block;
+  }
+
+  .hero picture img {
+    height: auto;
+    min-height: unset;
   }
 }
 
