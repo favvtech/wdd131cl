@@ -14,16 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
 // getting current year
   document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-  //Last Modified Date calculation
+  // Last Modified Date calculation (12-hour format)
   const lastModified = new Date(document.lastModified);
-  let hours = lastModified.getHours();
-  const minutes = lastModified.getMinutes().toString().padStart(2, '0');
-  const day = lastModified.getDate();
-  const month = lastModified.getMonth() + 1;
+  const month = String(lastModified.getMonth() + 1).padStart(2, "0");
+  const day = String(lastModified.getDate()).padStart(2, "0");
   const year = lastModified.getFullYear();
+  let hours = lastModified.getHours();
+  const minutes = String(lastModified.getMinutes()).padStart(2, "0");
+  const seconds = String(lastModified.getSeconds()).padStart(2, "0");
   const ampm = hours >= 12 ? "PM" : "AM";
   hours = hours % 12 || 12;
-  document.getElementById("lastModified").textContent = `Last Modified: ${month}/${day}/${year} ${hours}:${minutes} ${ampm}`;
+  const formattedHours = String(hours).padStart(2, "0");
+
+  const lastModifiedElement = document.getElementById("lastModified");
+  if (lastModifiedElement) {
+    lastModifiedElement.textContent = `Last Modification: ${month}/${day}/${year} ${formattedHours}:${minutes}:${seconds} ${ampm}`;
+  }
 
   // Windchill Calculation with its working formula
   const temp = parseFloat(document.getElementById("temperature").textContent);
